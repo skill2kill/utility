@@ -28,9 +28,9 @@ public class Flipkart {
 	public void login() {
 
 		WebElement userName = driver.findElement(By.cssSelector("input[class*='_2zrpKA _1dBPDZ']"));
-		userName.sendKeys("8895550448");
+		userName.sendKeys(" ");
 		WebElement password = driver.findElement(By.cssSelector("input[type*='password']"));
-		password.sendKeys("9337885883F");
+		password.sendKeys(" ");
 		password.sendKeys(Keys.ENTER);
 	}
 
