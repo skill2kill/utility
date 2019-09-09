@@ -21,9 +21,9 @@ public class TestFlipkart {
 
 		// UserName & Password
 		WebElement userName = driver.findElement(By.cssSelector("input[class*='_2zrpKA _1dBPDZ']"));
-		userName.sendKeys("8895550448");
+		userName.sendKeys("8");
 		WebElement password = driver.findElement(By.cssSelector("input[type*='password']"));
-		password.sendKeys("9337885883F");
+		password.sendKeys("933");
 
 		// Login
 		// Parent-Child xPath
