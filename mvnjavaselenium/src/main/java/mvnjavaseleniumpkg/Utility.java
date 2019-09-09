@@ -43,10 +43,11 @@ public class Utility {
 
 	}
 
-	public static void screenShot(WebDriver driver) throws Exception {
+	public static void screenShot(WebDriver driver, String screenshotname) throws Exception {
 
 		File src= ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileHandler.copy(src, new File("C:/selenium/" + System.currentTimeMillis() + ".png"));
-		//FileUtils.copyFile(src, new File("C:/selenium/" + System.currentTimeMillis() + ".png")); OLDCODE
+		FileHandler.copy(src, new File("C:/selenium/" + System.currentTimeMillis() + screenshotname + ".png"));
+		
+		//FileUtils.copyFile(src, new File("C:/selenium/" + System.currentTimeMillis() + ".png")); //OLDCODE
 	}
 }
