@@ -18,13 +18,13 @@ public class Utility {
 
 	public static void getDataFromExcel(String filepath, String sheetName, int row, int cell) throws IOException {
 
-		File f = new File(filepath); 					// create object for File class and pass the file path
-		FileInputStream fis = new FileInputStream(f);   // create File input stream class object and pass the file ref
-		Workbook wb = WorkbookFactory.create(fis); 		// covert regular file to workbook type
-		Sheet st = wb.getSheet(sheetName); 				// get sheet by workbook
-		Row r = st.getRow(row); 						// get row by sheet
-		Cell c = r.getCell(cell); 						// get cell by row
-		data = c.toString(); 							// convert cell value to string type
+		File f = new File(filepath); // create object for File class and pass the file path
+		FileInputStream fis = new FileInputStream(f); // create File input stream class object and pass the file ref
+		Workbook wb = WorkbookFactory.create(fis); // covert regular file to workbook type
+		Sheet st = wb.getSheet(sheetName); // get sheet by workbook
+		Row r = st.getRow(row); // get row by sheet
+		Cell c = r.getCell(cell); // get cell by row
+		data = c.toString(); // convert cell value to string type
 		// System.out.println(data);
 	}
 
@@ -45,9 +45,10 @@ public class Utility {
 
 	public static void screenShot(WebDriver driver, String screenshotname) throws Exception {
 
-		File src= ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileHandler.copy(src, new File("C:/selenium/" + System.currentTimeMillis() + screenshotname + ".png"));
-		
-		//FileUtils.copyFile(src, new File("C:/selenium/" + System.currentTimeMillis() + ".png")); //OLDCODE
+
+		// FileUtils.copyFile(src, new File("C:/selenium/" + System.currentTimeMillis()
+		// + ".png")); //OLDCODE
 	}
 }
